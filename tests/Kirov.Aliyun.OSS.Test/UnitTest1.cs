@@ -1,4 +1,4 @@
-using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Kirov.Aliyun.OSS.Test
@@ -6,9 +6,9 @@ namespace Kirov.Aliyun.OSS.Test
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public async Task Test1()
         {
-
+            
         }
     }
 }

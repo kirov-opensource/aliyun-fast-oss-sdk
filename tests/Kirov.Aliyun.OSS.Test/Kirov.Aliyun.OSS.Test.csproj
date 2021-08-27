@@ -19,4 +19,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Kirov.Aliyun.OSS\Kirov.Aliyun.OSS.csproj" />
+    <ProjectReference Include="..\..\src\Kirov.Extensions.Aliyun.OSS\Kirov.Extensions.Aliyun.OSS.csproj" />
+  </ItemGroup>
+
 </Project>
