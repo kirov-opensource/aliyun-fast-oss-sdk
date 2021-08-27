@@ -25,5 +25,18 @@ namespace Kirov.Aliyun.OSS
         {
             return objectClient.Put(stream, bucketName, path);
         }
+
+        /// <summary>
+        /// 上传文件
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <param name="bucketName"></param>
+        /// <param name="path"></param>
+        /// <param name="bufferSize"></param>
+        /// <returns></returns>
+        public Task PutObject(Stream stream, string bucketName, string path, int bufferSize)
+        {
+            return objectClient.Put(stream, bucketName, path, bufferSize);
+        }
     }
 }

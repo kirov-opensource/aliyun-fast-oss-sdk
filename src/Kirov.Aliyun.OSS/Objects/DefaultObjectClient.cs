@@ -22,5 +22,16 @@ namespace Kirov.Aliyun.OSS.Objects
             }
         }
 
+        public async Task Put(Stream stream, string bucketName, string path, int bufferSize)
+        {
+            using (var httpResponse = await base.SendAsync(bucketName, path, HttpMethod.Put, new StreamContent(stream, bufferSize)).ConfigureAwait(false))
+            {
+                if (httpResponse.StatusCode != System.Net.HttpStatusCode.OK)
+                {
+                    throw new HttpRequestException(await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false));
+                }
+            }
+        }
+
     }
 }
